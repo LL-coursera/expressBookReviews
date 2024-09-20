@@ -1,0 +1,48 @@
+@rootUrl = http://localhost:5000
+
+### 1. Get all books
+GET {{rootUrl}}/
+
+### 2. Get book by isbn
+GET {{rootUrl}}/isbn/1
+
+### 3. Get book by author
+GET {{rootUrl}}/author/ChinuA
+
+### 4. Get book by title
+GET {{rootUrl}}/title/The Epic Of Gi
+
+### 5 Get book review
+GET {{rootUrl}}/review/1
+
+### User register
+POST {{rootUrl}}/register
+Content-Type: application/json
+
+{
+  "username": "username-2",
+  "password": "password-2"
+}
+
+### User Login
+POST {{rootUrl}}/customer/login
+Content-Type: application/json
+
+{
+  "username": "username-1",
+  "password": "password-1"
+}
+
+### Update Review with Auth
+PUT {{rootUrl}}/customer/auth/review/1
+Content-Type: application/json
+
+{
+  "review": "This is great"
+}
+
+### deleting a book review under isbn
+DELETE  {{rootUrl}}/customer/auth/review/1
+
+
+
